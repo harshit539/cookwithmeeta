@@ -21,7 +21,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    'recipes',   # ✅ your app
+    'recipes',
 ]
 
 
@@ -45,7 +45,7 @@ ROOT_URLCONF = 'cookmeeta.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],   # (we are using app templates)
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -58,11 +58,9 @@ TEMPLATES = [
 ]
 
 
-# WSGI
 WSGI_APPLICATION = 'cookmeeta.wsgi.application'
 
 
-# DATABASE (SQLite)
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -71,7 +69,6 @@ DATABASES = {
 }
 
 
-# PASSWORD VALIDATION
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -87,8 +84,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
-# INTERNATIONAL
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -97,7 +92,6 @@ USE_I18N = True
 USE_TZ = True
 
 
-# 🔥 STATIC FILES (IMPORTANT PART)
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
@@ -105,7 +99,6 @@ STATICFILES_DIRS = [
 ]
 
 
-# DEFAULT PRIMARY KEY
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CACHES = {

@@ -24,7 +24,7 @@ def fetch_videos():
                 published_at = item['snippet']['publishedAt']
                 thumbnail = item['snippet']['thumbnails']['high']['url']
 
-                # 🔥 category detect
+                # category detect
                 title_lower = title.lower()
                 if "breakfast" in title_lower:
                     category = "Breakfast"
@@ -35,7 +35,7 @@ def fetch_videos():
                 else:
                     category = "Dinner"
 
-                # 🔥 fetch views
+                # fetch views
                 stats_url = f"https://www.googleapis.com/youtube/v3/videos?part=statistics&id={video_id}&key={API_KEY}"
                 stats_res = requests.get(stats_url).json()
 
@@ -43,7 +43,7 @@ def fetch_videos():
                 if stats_res.get('items'):
                     views = int(stats_res['items'][0]['statistics'].get('viewCount', 0))
 
-                # 🔥 save/update in DB
+                # save/update in DB
                 Video.objects.update_or_create(
                     video_id=video_id,
                     defaults={
@@ -55,7 +55,7 @@ def fetch_videos():
                     }
                 )
 
-        # 🔥 next page
+        # next page
         next_page_token = response.get('nextPageToken')
 
         if not next_page_token:
