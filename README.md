@@ -1,20 +1,44 @@
 # Cook With Meeta
 
-Netflix-style Django recipe streaming web app with YouTube integration.
+A premium Netflix-style Django web application for showcasing cooking videos with YouTube integration.
 
-## Features
+---
 
-- Dynamic video fetch
-- Responsive UI
-- Pagination
+## 🚀 Features
+
+- Dynamic YouTube video fetch
+- Responsive premium UI
 - Search functionality
-- YouTube thumbnails
-- Fast loading
+- Pagination support
+- Category filtering
+- Fast-loading thumbnails
+- Mobile-friendly design
 
-## Tech Stack
+---
+
+## 🛠 Tech Stack
 
 - Django
+- Python
 - SQLite
 - HTML/CSS
 - JavaScript
-- Render
+- Render Deployment
+
+---
+
+## 📸 Preview
+
+Netflix-inspired recipe streaming interface with modern UI.
+
+---
+
+## 🌐 Live Demo
+
+Coming Soon 🚀
+
+---
+
+## 👨‍💻 Developer
+
+Harshit
